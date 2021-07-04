@@ -28,8 +28,8 @@ from motioneye_client.const import (
     KEY_WEB_HOOK_STORAGE_URL,
 )
 
+from homeassistant.components.binary_sensor import DOMAIN as BINARY_SENSOR_DOMAIN
 from homeassistant.components.camera.const import DOMAIN as CAMERA_DOMAIN
-from homeassistant.components.switch import DOMAIN as SWITCH_DOMAIN
 from homeassistant.components.webhook import (
     async_generate_id,
     async_generate_path,
@@ -85,7 +85,7 @@ from .const import (
 )
 
 _LOGGER = logging.getLogger(__name__)
-PLATFORMS = [CAMERA_DOMAIN, SWITCH_DOMAIN]
+PLATFORMS = [BINARY_SENSOR_DOMAIN, CAMERA_DOMAIN]
 
 
 def create_motioneye_client(
